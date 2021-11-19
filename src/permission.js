@@ -63,6 +63,9 @@ router.beforeEach(async(to, from, next) => {
         NProgress.done()
       }
     }
+  } else if (/(website)/.test(to.fullPath)) {
+    next()
+    NProgress.done()
   } else {
     next()
   }
