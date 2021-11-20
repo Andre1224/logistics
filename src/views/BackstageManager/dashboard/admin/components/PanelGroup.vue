@@ -9,7 +9,7 @@
           <div class="card-panel-text">
             昨日订单数量
           </div>
-          <count-to :start-val="0" :end-val="19" :duration="2600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="20" :duration="2600" class="card-panel-num" />
         </div>
       </div>
     </el-col>

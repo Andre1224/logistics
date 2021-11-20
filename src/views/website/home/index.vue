@@ -9,6 +9,9 @@
     <div class="middleBoxWrap itemWrap">
       <middleBox class="middleBox-container" />
     </div>
+    <div class="serviceBox itemWrap">
+      <serviceBox class="serviceBox-container" />
+    </div>
     <div class="chosseTabWrap itemWrap">
       <chosseTab class="chosseTab-container" />
     </div>
@@ -25,6 +28,7 @@ export default {
     rollPic: () => import('@/components/WebsiteComponents/site/rollPic.vue'),
     selectBox: () =>
       import('@/components/WebsiteComponents/site/selectBox.vue'),
+    serviceBox: () => import('@/components/WebsiteComponents/site/serviceBox'),
     middleBox: () =>
       import('@/components/WebsiteComponents/site/middleBox.vue'),
     chosseTab: () =>

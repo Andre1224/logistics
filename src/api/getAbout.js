@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function getAbout(token) {
   return request({
-    url: '/vue-admin-template/getAbout',
+    url: '/logistic-test-api/getAbout',
     method: 'get',
     params: { token }
   })

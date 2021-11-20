@@ -1,16 +1,20 @@
 const Mock = require('mockjs')
 const { param2Obj } = require('./utils')
 
-const user = require('./user')
-const table = require('./table')
-const customInfo = require('./custominfo')
-const about = require('./about')
+// const user = require('./user')
+// const table = require('./table')
+// const customInfo = require('./custominfo')
+// const about = require('./about')
+const website = require('./websiteApi')
+const backmanager = require('./backmanagerApi')
 
 const mocks = [
-  ...user,
-  ...table,
-  ...customInfo,
-  ...about
+  // ...user,
+  // ...table,
+  // ...customInfo,
+  // ...about,
+  ...website,
+  ...backmanager
 ]
 
 // for front mock
@@ -22,7 +26,7 @@ function mockXHR() {
   Mock.XHR.prototype.proxy_send = Mock.XHR.prototype.send
   Mock.XHR.prototype.send = function() {
     if (this.custom.xhr) {
-      this.custom.xhr.withCredentials = this.withCredentials || false
+      this.custom.xhr.withCredentials = this.withCredentials || false 
 
       if (this.responseType) {
         this.custom.xhr.responseType = this.responseType

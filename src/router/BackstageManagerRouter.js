@@ -2,6 +2,12 @@ import Layout from '@/layout'
 
 const BackstageManager = [
   {
+    path: '/BackstageManager/login',
+    component: () => import('@/views/BackstageManager/login/index'),
+    hidden: true
+  },
+
+  {
     path: '/BackstageManager',
     component: Layout,
     redirect: '/BackstageManager/dashboard',
@@ -25,13 +31,15 @@ const BackstageManager = [
       {
         path: 'example',
         name: 'example',
-        component: () => import('@/views/BackstageManager/packageManagement/index'),
+        component: () =>
+          import('@/views/BackstageManager/packageManagement/index'),
         meta: { title: '样例', icon: 'el-icon-star-on' }
       },
       {
         path: 'pickup',
         name: 'Pickup',
-        component: () => import('@/views/BackstageManager/packageManagement/pickup'),
+        component: () =>
+          import('@/views/BackstageManager/packageManagement/pickup'),
         meta: { title: '取件服务管理', icon: 'table' }
       },
       {
@@ -83,13 +91,15 @@ const BackstageManager = [
       {
         path: 'import',
         name: 'Import',
-        component: () => import('@/views/BackstageManager/recipientManagement/customInfo'),
+        component: () =>
+          import('@/views/BackstageManager/recipientManagement/customInfo'),
         meta: { title: '客户信息', icon: 'el-icon-user-solid' }
       },
       {
         path: 'export',
         name: 'Export',
-        component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        component: () =>
+          import('@/views/BackstageManager/recipientManagement/index'),
         meta: { title: '导出信息', icon: 'link' }
       }
     ]
@@ -105,13 +115,15 @@ const BackstageManager = [
       {
         path: 'category',
         name: 'Category',
-        component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        component: () =>
+          import('@/views/BackstageManager/recipientManagement/index'),
         meta: { title: '留言分类', icon: 'el-icon-menu' }
       },
       {
         path: 'manage',
         name: 'Manage',
-        component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        component: () =>
+          import('@/views/BackstageManager/recipientManagement/index'),
         meta: { title: '留言管理', icon: 'el-icon-chat-dot-square' }
       }
     ]
@@ -132,27 +144,33 @@ const BackstageManager = [
         children: [
           {
             path: 'menu1-1',
-            component: () => import('@/views/BackstageManager/nested/menu1/menu1-1'),
+            component: () =>
+              import('@/views/BackstageManager/nested/menu1/menu1-1'),
             name: 'Menu1-1',
             meta: { title: 'Menu1-1' }
           },
           {
             path: 'menu1-2',
-            component: () => import('@/views/BackstageManager/nested/menu1/menu1-2'),
+            component: () =>
+              import('@/views/BackstageManager/nested/menu1/menu1-2'),
             name: 'Menu1-2',
             meta: { title: 'Menu1-2' },
             children: [
               {
                 path: 'menu1-2-1',
                 component: () =>
-                  import('@/views/BackstageManager/nested/menu1/menu1-2/menu1-2-1'),
+                  import(
+                    '@/views/BackstageManager/nested/menu1/menu1-2/menu1-2-1'
+                  ),
                 name: 'Menu1-2-1',
                 meta: { title: 'Menu1-2-1' }
               },
               {
                 path: 'menu1-2-2',
                 component: () =>
-                  import('@/views/BackstageManager/nested/menu1/menu1-2/menu1-2-2'),
+                  import(
+                    '@/views/BackstageManager/nested/menu1/menu1-2/menu1-2-2'
+                  ),
                 name: 'Menu1-2-2',
                 meta: { title: 'Menu1-2-2' }
               }
@@ -160,7 +178,8 @@ const BackstageManager = [
           },
           {
             path: 'menu1-3',
-            component: () => import('@/views/BackstageManager/nested/menu1/menu1-3'),
+            component: () =>
+              import('@/views/BackstageManager/nested/menu1/menu1-3'),
             name: 'Menu1-3',
             meta: { title: 'Menu1-3' }
           }

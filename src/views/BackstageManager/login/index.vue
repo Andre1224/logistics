@@ -109,8 +109,8 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
-          this.$store.dispatch('user/login', this.loginForm).then(() => {
-            this.$router.push({ path: this.redirect || '/' })
+          this.$store.dispatch('admin/login', this.loginForm).then(() => {
+            this.$router.push({ path: this.redirect || '/BackstageManager' })
             this.loading = false
           }).catch(() => {
             this.loading = false
