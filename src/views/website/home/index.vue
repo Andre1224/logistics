@@ -56,10 +56,10 @@ export default {
   display: flex;
   justify-content: center;
   z-index: 10;
-  transform: translateY(-30%);
+  transform: translateY(-10%);
 }
 .middleBoxWrap{
   position: relative;
-  transform: translateY(-20%);
+  transform: translateY(-0%);
 }
 </style>

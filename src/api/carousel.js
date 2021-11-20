@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function getCustomInfo(token) {
+export function getcarousel(token) {
   return request({
-    url: '/vue-admin-template/carousel',
+    url: '/logistic-test-api/carousel',
     method: 'get',
     params: { token }
   })

@@ -105,6 +105,9 @@ export default {
 </script>
 
 <style scoped>
+.el-input{
+  width: 80%;
+}
 .el-form-item{
   margin: 0;
 }
@@ -117,10 +120,10 @@ export default {
   box-shadow: 5px 5px 20px 0 #636e72;
 }
 .container-left {
-  flex: 1.5;
-  width: 33vw;
-  /* height: 100%; */
   position: relative;
+  flex: 1.5;
+  /* width: 33vw; */
+  /* height: 100%; */
   /* background-color: #fff; */
   /* background: url('/static/images/global.jpg') no-repeat ; */
   opacity: .8;
@@ -154,8 +157,13 @@ export default {
   display: flex;
   flex-direction: column;
 }
+.second{
+  width: 100%;
+  position: relative;
+}
 .second-body {
-  width: 33vw;
+
+  width: 100%;
   height: 20vh;
   /* background-color: rgb(99, 186, 197); */
   position: relative;
@@ -216,6 +224,7 @@ export default {
   color: #fff;
 }
 .container-right {
+  flex: 1;
   width: 26vw;
   height: 43vh;
   background-image: url('/static/images/notice.png');

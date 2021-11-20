@@ -29,7 +29,7 @@ export default {
   methods: {
     fetchData() {
       getAbout().then((response) => {
-        console.log(response.data.items)
+        // console.log(response.data.items)
         this.initData = response.data.items
       })
     }

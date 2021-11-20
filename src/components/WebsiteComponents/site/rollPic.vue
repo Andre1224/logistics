@@ -2,25 +2,38 @@
   <!-- 组件外容器 -->
   <div class="container">
     <!--  图表容器  -->
-    <el-carousel :interval="5000" height="46vh" indicator-position>
-      <el-carousel-item v-for="item in imagebox" :key="item.id">
-        <img :src="item.idView" class="image">
+    <el-carousel :interval="1500" height="100%" indicator-position>
+      <el-carousel-item v-for="item in initData" :key="item.img">
+        <img :src="item.img" class="image">
       </el-carousel-item>
     </el-carousel>
   </div>
 </template>
 
 <script>
+import { getcarousel } from '@/api/carousel'
+
 export default {
   name: 'RollPic',
   data() {
     return {
+      initData: null,
       imagebox: [
-        { id: 0, idView: require('/public/static/images/roll1.jpg') },
-        { id: 1, idView: require('/public/static/images/roll2.jpg') },
-        { id: 2, idView: require('/public/static/images/roll3.jpg') },
-        { id: 3, idView: require('/public/static/images/roll4.jpg') }
+        { id: 0, img: require('/public/static/images/roll1.jpg') },
+        { id: 1, img: require('/public/static/images/roll2.jpg') },
+        { id: 2, img: require('/public/static/images/roll3.jpg') },
+        { id: 3, img: require('/public/static/images/roll4.jpg') }
       ]
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData() {
+      getcarousel().then((response) => {
+        this.initData = response.data.items
+      })
     }
   }
 }

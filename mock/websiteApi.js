@@ -1,5 +1,30 @@
 const Mock = require('mockjs')
 
+const carousel = Mock.mock({
+    items: [
+        {
+            id: 0,
+            img: 'https://p3.lefile.cn/fes/cms/2021/11/15/lfomj18t0ozui06aom0omx4gcslfqh692967.jpg'
+        },
+        {
+            id: 1,
+            img: 'https://p3.lefile.cn/fes/cms/2021/11/15/oat8obgf99qdck8j3hdf1hrs8815kw734497.jpg'
+        },
+        {
+            id: 0,
+            img: 'https://p1.lefile.cn/fes/cms/2021/11/15/kl8sdwjxe7ua44h1hnv1sdbqzugymr864769.jpg'
+        },
+        {
+            id: 0,
+            img: 'https://p3.lefile.cn/fes/cms/2021/11/16/yotb4twv5qayu42ea352bcmbu7hpsn389856.jpg'
+        },
+        {
+            id: 0,
+            img: 'https://p2.lefile.cn/fes/cms/2021/11/15/0b7fuo9xxitsnq11esk5zwa63ckefy798333.jpg'
+        },
+    ]
+})
+
 const aboutus_data = Mock.mock({
   items: [
     '浩旭物流是2013年由美国硅谷投资，在英国注册的跨境物流公司。主营核心服务是欧洲至中国的国际快递，海淘转运和大宗货物空运。自成立以来，我们已服务英国及欧洲的数百万客户，覆盖留学生，海淘买手以及跨境电商。我们每年承运的包裹数量百万件， 包含各类个人物品，文件， 海淘商品，归国行李等等。',
@@ -103,6 +128,20 @@ module.exports = [
     type: 'get',
     response: (config) => {
       const items = problem_data.items
+      return {
+        code: 20000,
+        data: {
+          total: items.length,
+          items: items
+        }
+      }
+    }
+  },
+  {
+    url: '/logistic-test-api/carousel',
+    type: 'get',
+    response: (config) => {
+      const items = carousel.items
       return {
         code: 20000,
         data: {
