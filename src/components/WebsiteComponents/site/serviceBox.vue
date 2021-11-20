@@ -38,35 +38,35 @@ export default {
           icon: 'el-icon-takeaway-box',
           title: '大件物品',
           content:
-            '为贵重物品量身定制的奢侈品包税专线，无物品价值限制，可额外买..',
+            '请下单前先通过下列尺寸检查器检查物品尺寸。',
           link: '#'
         },
         {
           icon: 'el-icon-present',
           title: '奶粉包税',
           content:
-            '为贵重物品量身定制的奢侈品包税专线，无物品价值限制，可额外买..',
+            '神州物流奶粉包税专线是全英最稳定，网络最全的奶粉...',
           link: '#'
         },
         {
           icon: 'el-icon-suitcase-1',
           title: '行李专线',
           content:
-            '为贵重物品量身定制的奢侈品包税专线，无物品价值限制，可额外买..',
+            '为时效快：7-10天空运到家，邮政绿色清关(非正常的清关延误不...',
           link: '#'
         },
         {
           icon: 'el-icon-lollipop',
           title: '杂货包税',
           content:
-            '为贵重物品量身定制的奢侈品包税专线，无物品价值限制，可额外买..',
+            '适合邮寄低价食品/保健品/洗护日用品，尤其适合邮寄成人奶粉/...',
           link: '#'
         },
         {
           icon: 'el-icon-box',
           title: '小包裹包税',
           content:
-            '为贵重物品量身定制的奢侈品包税专线，无物品价值限制，可额外买..',
+            '请下单前先通过下列尺寸检查器检查物品尺寸。',
           link: '#'
         }
       ]
@@ -161,7 +161,7 @@ export default {
 }
 .content {
   font-size: 0.7rem;
-  color: #a6a2a2;
+  /* color: #a6a2a2; */
 }
 .link {
   color: #e99f4f;

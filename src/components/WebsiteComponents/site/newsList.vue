@@ -7,16 +7,18 @@
         <a href="#">查看更多>></a>
       </div>
       <div class="newscon">
-        <div v-for="item in newObj" :key="item.title" class="ncon">
+        <div v-for="item in newlist" :key="item.title" class="ncon">
           <div class="conimg">
             <img :src="item.pic" alt="">
           </div>
           <div class="conread">
             <div class="readtitle">
-              <span class="contitle">{{ item.title }}</span>
-              <span class="contime">{{ item.time }}</span>
+              <span class="contitle" v-text="item.title" />
+              <span class="contime" v-text="item.timestamp" />
             </div>
-            <p>{{ item.content }}</p>
+            <div class="contentWrap">
+              <p v-text="item.content.slice(0, 75) + '...'" />
+            </div>
           </div>
         </div>
       </div>
@@ -27,14 +29,14 @@
         <a href="#">查看更多>></a>
       </div>
       <div class="procon">
-        <div v-for="item in proObj" :key="item.question" class="pcon">
+        <div v-for="item in questionlist" :key="item.question" class="pcon">
           <div class="prowen">
             <div class="tagwen">问</div>
             <span class="wencon" v-text="item.question" />
           </div>
           <div class="proda">
             <div class="tagda">答</div>
-            <div class="dacon" v-text="item.answer" />
+            <div class="dacon" v-text="item.answer.slice(0, 60) + '...'" />
           </div>
         </div>
       </div>
@@ -43,9 +45,16 @@
 </template>
 
 <script>
+import { getNews } from '@/api/getNews'
+import { getQuestion } from '@/api/getQuestion'
+
 export default {
+  name: 'NewsList',
   data() {
     return {
+      initData: null,
+      newlist: null,
+      questionlist: null,
       newObj: [
         {
           pic: require('/public/static/images/conimg01.jpg'),
@@ -82,6 +91,20 @@ export default {
           answer: '您可通过我们的网站自足下单，我们的客服不能帮助下单'
         }
       ]
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData() {
+      getNews().then((responce) => {
+        this.initData = responce.data.items
+        this.newlist = this.initData.slice(0, 3)
+      })
+      getQuestion().then((responce) => {
+        this.questionlist = responce.data.items.slice(0, 3)
+      })
     }
   }
 }
@@ -139,6 +162,12 @@ img {
   width: 600px;
   height: 105px;
   margin-left: 15px;
+  text-overflow: ellipsis;
+}
+.contentWrap {
+  height: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .readtitle {
   margin-top: 15px;
@@ -225,5 +254,6 @@ p {
   margin-left: 18px;
   width: 292px;
   color: #5d5d5d;
+  overflow: hidden;
 }
 </style>

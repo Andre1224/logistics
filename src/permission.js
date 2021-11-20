@@ -16,8 +16,8 @@ router.beforeEach(async(to, from, next) => {
   // console.log(to)
   // set page title
   document.title = getPageTitle(to.meta.title)
-  console.log(to)
-  console.log(/(BackstageManager)/.test(to.fullPath))
+  // console.log(to)
+  // console.log(/(BackstageManager)/.test(to.fullPath))
   // determine whether the user has logged in
   // 后台校验管理员状态
   // if (/(BackstageManager)/.test(to.fullPath)) {
