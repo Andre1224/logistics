@@ -9,7 +9,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  // overflow-x: hidden; /*隐藏水平滚动条*/
+  overflow-y: scroll; /*隐藏水平滚动条*/
+  // font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family: -apple-system, Helvetica Neue, Arial, PingFang SC,
+    Hiragino Sans GB, STHeiti, Microsoft YaHei, Microsoft JhengHei,
+    Source Han Sans SC, Noto Sans CJK SC, Source Han Sans CN, Noto Sans SC,
+    Source Han Sans TC, Noto Sans CJK TC, WenQuanYi Micro Hei, SimSun,
+    sans-serif;
+  &::-webkit-scrollbar {
+    // display: none;
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+  }
 }
 
 label {
@@ -17,8 +36,14 @@ label {
 }
 
 html {
-  height: 100%;
+  font-size: 10px;
+  // height: 100%;
   box-sizing: border-box;
+}
+@media screen and (min-width: 2560px){
+  html{
+    font-size: 14px;
+  }
 }
 
 #app {
@@ -53,7 +78,7 @@ div:focus {
     visibility: hidden;
     display: block;
     font-size: 0;
-    content: " ";
+    content: ' ';
     clear: both;
     height: 0;
   }

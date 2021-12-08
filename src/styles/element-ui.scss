@@ -47,3 +47,45 @@
 .el-range-separator {
   box-sizing: content-box;
 }
+
+.el-input__inner {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  border-bottom: 1px solid #7f8c8d;
+  background-color: transparent;
+}
+.el-tabs__nav {
+  border: none !important;
+}
+.el-tabs__item {
+  width: 10rem;
+  height: 4rem;
+  text-align: center;
+  line-height: 4rem;
+  margin-right: .2rem;
+  border: none !important;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  &.is-active {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+  &:nth-child(2){
+    padding: 0 10px !important;
+  }
+}
+
+.el-tabs__header{
+  margin-bottom: 0;
+}
+.el-checkbox__label{
+  font-size: 1rem;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(87, 96, 111,1.0) !important;
+  // font-size: 20px;
+  // font-weight: bolder;
+}
