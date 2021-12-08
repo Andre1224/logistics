@@ -1,4 +1,4 @@
-import Layout from '@/views/website/layout'
+import Layout from '@/views/webapp/layout'
 
 const SiteRouter = [
   {

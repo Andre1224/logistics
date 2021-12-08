@@ -48,7 +48,7 @@ export default {
 }
 .itemWrap{
   position: relative;
-  width: 100%;
+  width: 1920px;
 }
 .selectBoxWrap{
   width: 60%;
@@ -56,10 +56,10 @@ export default {
   display: flex;
   justify-content: center;
   z-index: 10;
-  transform: translateY(-30%);
+  transform: translateY(-10%);
 }
 .middleBoxWrap{
   position: relative;
-  transform: translateY(-20%);
+  transform: translateY(-0%);
 }
 </style>

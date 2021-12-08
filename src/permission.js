@@ -24,20 +24,20 @@ router.beforeEach(async(to, from, next) => {
   if (/(BackstageManager)/.test(to.fullPath)) {
     const hasToken = getToken()
     if (hasToken) {
-      console.log(hasToken)
-      if (to.path === '/BackstageManager/login') {
+      // console.log(hasToken)
+      if (to.path === '/login') {
         // if is logged in, redirect to the home page
         next({ path: '/' })
         NProgress.done()
       } else {
         const hasGetUserInfo = store.getters.name
+        // const isAdmin = store.getters.roles
         if (hasGetUserInfo) {
           next()
         } else {
           try {
             // get user info
             await store.dispatch('admin/getInfo')
-
             next()
           } catch (error) {
             // remove token and go to login page to re-login
@@ -59,15 +59,18 @@ router.beforeEach(async(to, from, next) => {
       } else {
         // other pages that do not have permission to access are redirected to the login page.
         // next(`/BackstageManager/login?redirect=${to.path}`)
-        next(`/BackstageManager/login?redirect=${to.path}`)
+        // next(`/BackstageManager/login?redirect=${to.path}`)
+        next(`/login?redirect=${to.path}`)
         NProgress.done()
       }
     }
-  } else if (/(website)/.test(to.fullPath)) {
+  } else {
+    const hasToken = getToken()
+    if (hasToken) {
+      await store.dispatch('admin/getInfo')
+    }
     next()
     NProgress.done()
-  } else {
-    next()
   }
 })
 

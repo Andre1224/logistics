@@ -54,43 +54,7 @@ export default {
     return {
       initData: null,
       newlist: null,
-      questionlist: null,
-      newObj: [
-        {
-          pic: require('/public/static/images/conimg01.jpg'),
-          title: '哪些物品禁运，后果是什么？',
-          time: '2018-09-05 20:38:06',
-          content: '哪些物品禁运，后果是什么？'
-        },
-        {
-          pic: require('/public/static/images/conimg02.jpg'),
-          title: '罐奶粉包税线路每个收件人/每个地址可以邮寄多少箱',
-          time: '2018-09-05 20:37:28',
-          content: '罐奶粉包税线路每个收件人/每个地址可以邮寄多少箱'
-        },
-        {
-          pic: require('/public/static/images/conimg03.jpg'),
-          title: '奶粉包税路线能不能夹带物品',
-          time: '2018-09-05 20:36:52',
-          content: '奶粉包税路线能不能夹带物品'
-        }
-      ],
-      proObj: [
-        {
-          question: '包裹几天到达国内？失效如何？',
-          answer:
-            '不同专线，时效不同，碰上节假日及海关抽查也会有一定延迟，请综合以上情况选择最合适'
-        },
-        {
-          question: '如何开通VIP大客户“批量发货”？',
-          answer:
-            '在下单页面，批量发货需联系我们的VIP大客户经理开通，此路线须达到每次30箱以上发货'
-        },
-        {
-          question: '如何让快速下单 客服帮助下单吗？',
-          answer: '您可通过我们的网站自足下单，我们的客服不能帮助下单'
-        }
-      ]
+      questionlist: null
     }
   },
   created() {

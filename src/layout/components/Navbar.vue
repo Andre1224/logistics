@@ -58,7 +58,7 @@ export default {
     async logout() {
       await this.$store.dispatch('admin/logout')
       // this.$router.push(`/BackstageManagerlogin?redirect=${this.$route.fullPath}`)
-      this.$router.push(`/BackstageManager/login`)
+      this.$router.push('/login')
     },
     toUserSpace() {
       this.$message({
