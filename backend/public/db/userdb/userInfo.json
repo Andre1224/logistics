@@ -1,0 +1,16 @@
+{
+    "admin-token": {
+        "id": "00000001",
+        "name": "admin",
+        "avatar": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww2.sinaimg.cn%2Flarge%2F9150e4e5ly1fn0xivl3t9g206m08c761.gif&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1639899915&t=3b02c812a977f908870abccafb7f9f7f",
+        "introduction": "I am a super administrator",
+        "roles": ["admin", "web-admin", "mall-admin", "custom"]
+    },
+    "custom-token": {
+        "id": "00000002",
+        "name": "peter",
+        "avatar": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww2.sinaimg.cn%2Flarge%2F9150e4e5ly1fn0xivl3t9g206m08c761.gif&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1639899915&t=3b02c812a977f908870abccafb7f9f7f",
+        "introduction": "I am a custom",
+        "roles": ["custom"]
+    }
+}
