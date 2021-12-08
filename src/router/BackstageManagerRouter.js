@@ -127,6 +127,123 @@ const BackstageManager = [
         meta: { title: '留言管理', icon: 'el-icon-chat-dot-square' }
       }
     ]
+  }, // 网站管理
+  {
+    path: '/BackstageManager/webapp',
+    component: Layout,
+    redirect: '/BackstageManager/webapp/index',
+    name: '网站管理',
+    meta: { title: '网站管理', icon: 'website' },
+    children: [
+      {
+        path: 'index',
+        name: 'index',
+        // component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        meta: { title: '首页管理', icon: 'websiteback' },
+        children: [
+          {
+            path: 'carousel',
+            component: () =>
+              import('@/views/BackstageManager/nested/menu1/menu1-1'),
+            name: 'carousel',
+            meta: { title: '轮播图', icon: 'websitecarousel' }
+          },
+          {
+            path: 'specialservice',
+            component: () =>
+              import('@/views/BackstageManager/nested/menu1/menu1-1'),
+            name: 'specialservice',
+            meta: { title: '特色服务', icon: 'websitespecialservice' }
+          },
+          {
+            path: 'directmail',
+            component: () =>
+              import('@/views/BackstageManager/nested/menu1/menu1-1'),
+            name: 'directmail',
+            meta: { title: '直邮服务', icon: 'websitedirectmail' }
+          },
+          {
+            path: 'helpcenter',
+            name: 'helpcenter',
+            meta: { title: '帮助中心', icon: 'websitehelp' },
+            children: [
+              {
+                path: 'about',
+                component: () =>
+                  import('@/views/BackstageManager/nested/menu1/menu1-1'),
+                name: 'about',
+                meta: { title: '关于我们', icon: 'websiteabout' }
+              },
+              {
+                path: 'problem',
+                component: () =>
+                  import('@/views/BackstageManager/nested/menu1/menu1-1'),
+                name: 'problem',
+                meta: { title: '常见问题', icon: 'el-icon-warning-outline' }
+              },
+              {
+                path: 'announce',
+                component: () =>
+                  import('@/views/BackstageManager/nested/menu1/menu1-1'),
+                name: 'announce',
+                meta: { title: '最新公告', icon: 'websiteannounce' }
+              },
+              {
+                path: 'activity',
+                component: () =>
+                  import('@/views/BackstageManager/nested/menu1/menu1-1'),
+                name: 'activity',
+                meta: { title: '最新活动', icon: 'websiteactivity' }
+              },
+              {
+                path: 'cooperate',
+                component: () =>
+                  import('@/views/BackstageManager/nested/menu1/menu1-1'),
+                name: 'cooperate',
+                meta: { title: '加盟合作', icon: 'websitecoop' }
+              },
+              {
+                path: 'contact',
+                component: () =>
+                  import('@/views/BackstageManager/nested/menu1/menu1-1'),
+                name: 'contact',
+                meta: { title: '联系我们', icon: 'websitecontact' }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        path: 'service',
+        name: 'service',
+        // component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        meta: { title: '服务与产品管理', icon: 'el-icon-shopping-bag-1' }
+      },
+      {
+        path: 'mall',
+        name: 'mall',
+        // component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        meta: { title: '商城管理', icon: 'el-icon-shopping-cart-full' }
+      },
+      {
+        path: 'about',
+        name: 'about',
+        // component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        meta: { title: '关于我们', icon: 'websiteabout' }
+      },
+      {
+        path: 'news',
+        name: 'news',
+        // component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        meta: { title: '新闻中心', icon: 'websiteannounce' }
+      },
+      {
+        path: 'freight',
+        name: 'freight',
+        // component: () => import('@/views/BackstageManager/recipientManagement/index'),
+        meta: { title: '运费报价', icon: 'el-icon-coin' }
+      }
+    ]
   },
   // 折叠菜单
   {

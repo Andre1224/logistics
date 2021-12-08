@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import SiteRouter from './SiteRouter'
+// import SiteRouter from './SiteRouter'
+import webapprouter from './webapprouter'
 import BackstageManager from './BackstageManagerRouter'
 
 Vue.use(Router)
@@ -40,10 +41,15 @@ export const constantRoutes = [
   },
   {
     path: '/',
-    component: () => import('@/views/website/layout'),
-    redirect: '/website'
+    component: () => import('@/views/webapp/layout'),
+    redirect: '/webapp'
   },
-  ...SiteRouter,
+  {
+    path: '/login',
+    component: () => import('@/views/webapp/login/')
+  },
+  // ...SiteRouter,
+  ...webapprouter,
   ...BackstageManager,
   // {
   //   path: 'external-link',
