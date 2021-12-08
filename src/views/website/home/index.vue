@@ -48,7 +48,7 @@ export default {
 }
 .itemWrap{
   position: relative;
-  width: 100%;
+  width: 1920px;
 }
 .selectBoxWrap{
   width: 60%;
